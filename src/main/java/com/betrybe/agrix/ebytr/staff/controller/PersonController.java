@@ -34,7 +34,7 @@ public class PersonController {
    * @return - return
    */
   @PostMapping
-  public ResponseEntity<?> createPerson(@RequestBody PersonDto personDto) {
+  public ResponseEntity<?> create(@RequestBody PersonDto personDto) {
 
     Person newPerson = personService.create(personDto.toPerson());
     FromPersonDto response = FromPersonDto.from(newPerson);
