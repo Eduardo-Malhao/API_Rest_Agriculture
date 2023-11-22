@@ -1,6 +1,6 @@
-package com.betrybe.agrix.ebytr.staff.models.controllers.dto;
+package com.betrybe.agrix.ebytr.staff.controller.dto;
 
-import com.betrybe.agrix.ebytr.staff.models.entities.Farm;
+import com.betrybe.agrix.ebytr.staff.entity.Farm;
 
 /**
  * Java Type Method.

@@ -1,10 +1,10 @@
-package com.betrybe.agrix.ebytr.staff.models.controllers;
+package com.betrybe.agrix.ebytr.staff.controller;
 
-import com.betrybe.agrix.ebytr.staff.models.controllers.dto.CropDto;
-import com.betrybe.agrix.ebytr.staff.models.controllers.dto.FarmDto;
-import com.betrybe.agrix.ebytr.staff.models.entities.Crop;
-import com.betrybe.agrix.ebytr.staff.models.entities.Farm;
-import com.betrybe.agrix.ebytr.staff.models.services.FarmService;
+import com.betrybe.agrix.ebytr.staff.controller.dto.CropDto;
+import com.betrybe.agrix.ebytr.staff.controller.dto.FarmDto;
+import com.betrybe.agrix.ebytr.staff.entity.Crop;
+import com.betrybe.agrix.ebytr.staff.entity.Farm;
+import com.betrybe.agrix.ebytr.staff.service.FarmService;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -31,6 +31,16 @@ public class FarmController {
   @Autowired
   public FarmController(FarmService farmService) {
     this.farmService = farmService;
+  }
+
+  /**
+   * Resumo.
+   *
+   * @return - return
+   */
+  @GetMapping
+  public List<Farm> getAllFarms() {
+    return farmService.getAllFarms();
   }
 
   /**
