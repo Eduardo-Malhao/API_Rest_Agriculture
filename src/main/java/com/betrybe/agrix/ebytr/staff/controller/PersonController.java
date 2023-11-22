@@ -26,6 +26,12 @@ public class PersonController {
     this.personService = personService;
   }
 
+  /**
+   * Resumo.
+   *
+   * @param personDto - personDto
+   * @return - return
+   */
   @PostMapping
   public ResponseEntity<?> createPerson(@RequestBody PersonDto personDto) {
 

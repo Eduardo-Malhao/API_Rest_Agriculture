@@ -12,6 +12,11 @@ import com.betrybe.agrix.ebytr.staff.security.Role;
  */
 public record PersonDto(String username, String password, Role role) {
 
+  /**
+   * Resumo.
+   *
+   * @return - return
+   */
   public Person toPerson() {
     Person person = new Person();
     person.setUsername(username);

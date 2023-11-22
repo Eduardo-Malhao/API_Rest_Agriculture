@@ -8,7 +8,6 @@ import org.springframework.security.config.annotation.web.configurers.AbstractHt
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
 
-
 /**
  * Java Doc Method.
  */
@@ -16,6 +15,13 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableWebSecurity
 public class SecurityConfiguartion {
 
+  /**
+   * Resumo.
+   *
+   * @param httpSecurity - http
+   * @return - return
+   * @throws Exception - exception
+   */
   @Bean
   public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
     return httpSecurity
