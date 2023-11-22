@@ -1,6 +1,6 @@
-package com.betrybe.agrix.ebytr.staff.repository;
+package com.betrybe.agrix.ebytr.staff.models.repositories;
 
-import com.betrybe.agrix.ebytr.staff.entity.Farm;
+import com.betrybe.agrix.ebytr.staff.models.entities.Farm;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

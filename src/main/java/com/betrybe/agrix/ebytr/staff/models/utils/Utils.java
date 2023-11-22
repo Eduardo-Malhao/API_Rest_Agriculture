@@ -1,4 +1,4 @@
-package com.betrybe.agrix.ebytr.staff.utils;
+package com.betrybe.agrix.ebytr.staff.models.utils;
 
 import java.time.LocalDate;
 

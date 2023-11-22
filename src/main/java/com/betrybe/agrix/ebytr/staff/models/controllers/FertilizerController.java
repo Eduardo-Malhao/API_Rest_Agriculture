@@ -1,7 +1,7 @@
-package com.betrybe.agrix.ebytr.staff.controllers;
+package com.betrybe.agrix.ebytr.staff.models.controllers;
 
-import com.betrybe.agrix.ebytr.staff.entity.Fertilizer;
-import com.betrybe.agrix.ebytr.staff.service.FertilizerService;
+import com.betrybe.agrix.ebytr.staff.models.entities.Fertilizer;
+import com.betrybe.agrix.ebytr.staff.models.services.FertilizerService;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;

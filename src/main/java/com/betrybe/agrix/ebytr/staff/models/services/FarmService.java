@@ -1,8 +1,9 @@
-package com.betrybe.agrix.ebytr.staff.service;
+package com.betrybe.agrix.ebytr.staff.models.services;
 
-import com.betrybe.agrix.ebytr.staff.entity.Crop;
-import com.betrybe.agrix.ebytr.staff.entity.Farm;
-import com.betrybe.agrix.ebytr.staff.repository.FarmRepository;
+import com.betrybe.agrix.ebytr.staff.models.entities.Crop;
+import com.betrybe.agrix.ebytr.staff.models.entities.Farm;
+import com.betrybe.agrix.ebytr.staff.models.repositories.FarmRepository;
+import com.betrybe.agrix.ebytr.staff.models.services.CropService;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

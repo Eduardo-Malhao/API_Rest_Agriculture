@@ -1,4 +1,4 @@
-package com.betrybe.agrix.ebytr.staff.entity;
+package com.betrybe.agrix.ebytr.staff.models.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Entity;
@@ -10,22 +10,40 @@ import jakarta.persistence.Table;
 import java.util.List;
 
 /**
- * Java Doc Method.
+ * Java Doc Type.
  */
 @Entity
-@Table(name = "fertilizer")
-public class Fertilizer {
+@Table(name = "farms")
+public class Farm {
+
+  /**
+   * Resumo.
+   *
+   * @param name - name
+   * @param size - tamanho
+   */
+  public Farm(String name, Double size) {
+    this.name = name;
+    this.size = size;
+  }
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Integer id;
   private String name;
-  private String brand;
-  private String composition;
+  private Double size;
 
-  @OneToMany(mappedBy = "fertilizers")
+  @OneToMany(mappedBy = "farm")
   @JsonIgnore
   private List<Crop> crops;
+
+  public List<Crop> getCrops() {
+    return crops;
+  }
+
+  public void setCrops(List<Crop> crops) {
+    this.crops = crops;
+  }
 
   public Integer getId() {
     return id;
@@ -43,19 +61,14 @@ public class Fertilizer {
     this.name = name;
   }
 
-  public String getBrand() {
-    return brand;
+  public Double getSize() {
+    return size;
   }
 
-  public void setBrand(String brand) {
-    this.brand = brand;
+  public void setSize(Double size) {
+    this.size = size;
   }
 
-  public String getComposition() {
-    return composition;
-  }
-
-  public void setComposition(String composition) {
-    this.composition = composition;
+  public Farm() {
   }
 }

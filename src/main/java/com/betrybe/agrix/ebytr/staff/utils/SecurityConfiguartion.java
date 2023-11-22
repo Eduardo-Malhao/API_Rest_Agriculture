@@ -1,4 +1,4 @@
-package com.betrybe.agrix.ebytr.staff.security;
+package com.betrybe.agrix.ebytr.staff.utils;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

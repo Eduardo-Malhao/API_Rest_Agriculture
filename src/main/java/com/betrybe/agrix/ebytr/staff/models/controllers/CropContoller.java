@@ -1,11 +1,11 @@
-package com.betrybe.agrix.ebytr.staff.controllers;
+package com.betrybe.agrix.ebytr.staff.models.controllers;
 
-import com.betrybe.agrix.ebytr.staff.controllers.dto.CropDto;
-import com.betrybe.agrix.ebytr.staff.entity.Crop;
-import com.betrybe.agrix.ebytr.staff.entity.Fertilizer;
-import com.betrybe.agrix.ebytr.staff.service.CropService;
-import com.betrybe.agrix.ebytr.staff.service.FertilizerService;
-import com.betrybe.agrix.ebytr.staff.utils.Utils;
+import com.betrybe.agrix.ebytr.staff.models.controllers.dto.CropDto;
+import com.betrybe.agrix.ebytr.staff.models.entities.Crop;
+import com.betrybe.agrix.ebytr.staff.models.entities.Fertilizer;
+import com.betrybe.agrix.ebytr.staff.models.services.CropService;
+import com.betrybe.agrix.ebytr.staff.models.services.FertilizerService;
+import com.betrybe.agrix.ebytr.staff.models.utils.Utils;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
@@ -23,7 +23,6 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * Java Type Method.
  */
-
 @RestController
 @RequestMapping(value = "/crops")
 public class CropContoller {

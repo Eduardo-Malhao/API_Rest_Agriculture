@@ -1,4 +1,4 @@
-package com.betrybe.agrix.ebytr.staff.controllers.dto;
+package com.betrybe.agrix.ebytr.staff.models.controllers.dto;
 
 /**
  * Java Type Method.
