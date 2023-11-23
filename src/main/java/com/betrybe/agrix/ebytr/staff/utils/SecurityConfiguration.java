@@ -4,6 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -19,6 +20,12 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfiguration {
+
+  private final SecurityFilter securityFilter;
+
+  public SecurityConfiguration(SecurityFilter securityFilter) {
+    this.securityFilter = securityFilter;
+  }
 
   @Bean
   public AuthenticationManager authenticationManager(
@@ -48,6 +55,10 @@ public class SecurityConfiguration {
             .requestMatchers(HttpMethod.POST, "/persons").permitAll()
             .requestMatchers(HttpMethod.POST, "/auth/login").permitAll()
             .anyRequest().authenticated()
+        )
+        .addFilterBefore(
+            securityFilter,
+            UsernamePasswordAuthenticationToken.class
         )
         .build();
   }
