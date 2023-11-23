@@ -18,7 +18,7 @@ import org.springframework.security.web.SecurityFilterChain;
  */
 @Configuration
 @EnableWebSecurity
-public class SecurityConfiguartion {
+public class SecurityConfiguration {
 
   @Bean
   public AuthenticationManager authenticationManager(

@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,8 +24,6 @@ public class AuthenticationController {
 
   private final TokenService tokenService;
 
-  private final PersonService personService;
-
   @Autowired
   public AuthenticationController(
       AuthenticationManager authenticationManager,
@@ -32,7 +31,6 @@ public class AuthenticationController {
       TokenService tokenService
   ) {
     this.authenticationManager = authenticationManager;
-    this.personService = personService;
     this.tokenService = tokenService;
   }
 
@@ -46,9 +44,9 @@ public class AuthenticationController {
             authenticationDTO.password());
     Authentication auth = authenticationManager.authenticate(usernamePassword);
 
-    Person person = (Person) auth.getPrincipal();
+    UserDetails userDetails = (UserDetails) auth.getPrincipal();
 
-    String token = tokenService.generateToken(person);
+    String token = tokenService.generateToken(userDetails);
 
     return ResponseEntity.status(HttpStatus.OK).body(token);
   }
