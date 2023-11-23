@@ -11,6 +11,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 /**
@@ -41,14 +42,6 @@ public class Person implements UserDetails {
     this.id = id;
   }
 
-  public void setUsername(String username) {
-    this.username = username;
-  }
-
-  public void setPassword(String password) {
-    this.password = password;
-  }
-
   public Role getRole() {
     return role;
   }
@@ -57,39 +50,60 @@ public class Person implements UserDetails {
     this.role = role;
   }
 
-  @Override
-  public Collection<? extends GrantedAuthority> getAuthorities() {
-    return List.of();
+  public void setUsername(String username) {
+    this.username = username;
+  }
+
+  public void setPassword(String password) {
+    this.password = password;
   }
 
   @Override
   public String getPassword() {
-    return this.password;
+    return password;
   }
 
   @Override
   public String getUsername() {
-    return this.username;
+    return username;
   }
 
   @Override
   public boolean isAccountNonExpired() {
-    return true;
+    return false;
   }
 
   @Override
   public boolean isAccountNonLocked() {
-    return true;
+    return false;
   }
 
   @Override
   public boolean isCredentialsNonExpired() {
-    return true;
+    return false;
   }
 
   @Override
   public boolean isEnabled() {
-    return true;
+    return false;
+  }
+
+  @Override
+  public Collection<? extends GrantedAuthority> getAuthorities() {
+    return List.of(new SimpleGrantedAuthority(role));
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    Person person = (Person) o;
+    return Objects.equals(id, person.id) && Objects.equals(username,
+        person.username) && Objects.equals(password, person.password)
+        && Objects.equals(role, person.role);
   }
 }
-

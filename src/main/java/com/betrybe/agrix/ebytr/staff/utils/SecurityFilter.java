@@ -16,6 +16,9 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
+/**
+ * Java Doc Method.
+ */
 @Component
 public class SecurityFilter extends OncePerRequestFilter {
 
@@ -41,8 +44,10 @@ public class SecurityFilter extends OncePerRequestFilter {
       UsernamePasswordAuthenticationToken authentication =
           new UsernamePasswordAuthenticationToken(
               userDetails, null, userDetails.getAuthorities());
+
       SecurityContextHolder.getContext().setAuthentication(authentication);
     }
+    
     filterChain.doFilter(request, response);
   }
 

@@ -6,5 +6,6 @@ package com.betrybe.agrix.ebytr.staff.controller.dto;
  * @param username - username
  * @param password - password
  */
-public record AuthenticationDTO (String username, String password){
+public record AuthenticationDto(String username, String password) {
+
 }

@@ -1,7 +1,7 @@
 package com.betrybe.agrix.ebytr.staff.controller;
 
-import com.betrybe.agrix.ebytr.staff.controller.dto.AuthenticationDTO;
-import com.betrybe.agrix.ebytr.staff.entity.Person;
+import com.betrybe.agrix.ebytr.staff.controller.dto.AuthenticationDto;
+import com.betrybe.agrix.ebytr.staff.controller.dto.TokenDto;
 import com.betrybe.agrix.ebytr.staff.service.PersonService;
 import com.betrybe.agrix.ebytr.staff.service.TokenService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,38 +16,47 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
+/**
+ * Java Doc Method.
+ */
 @RestController
 @RequestMapping(value = "/auth")
 public class AuthenticationController {
 
   private final AuthenticationManager authenticationManager;
-
   private final TokenService tokenService;
 
   @Autowired
   public AuthenticationController(
       AuthenticationManager authenticationManager,
-      PersonService personService,
       TokenService tokenService
   ) {
     this.authenticationManager = authenticationManager;
     this.tokenService = tokenService;
   }
 
+  /**
+   * Resumo.
+   *
+   * @param authenticationDto - authDto
+   * @return - return
+   */
   @PostMapping("/login")
   public ResponseEntity<?> login(
-      @RequestBody AuthenticationDTO authenticationDTO
+      @RequestBody AuthenticationDto authenticationDto
   ) {
     UsernamePasswordAuthenticationToken usernamePassword =
         new UsernamePasswordAuthenticationToken(
-            authenticationDTO.username(),
-            authenticationDTO.password());
+            authenticationDto.username(),
+            authenticationDto.password());
     Authentication auth = authenticationManager.authenticate(usernamePassword);
 
     UserDetails userDetails = (UserDetails) auth.getPrincipal();
 
     String token = tokenService.generateToken(userDetails);
+    TokenDto tokenDto = new TokenDto(token);
 
-    return ResponseEntity.status(HttpStatus.OK).body(token);
+    return ResponseEntity.status(HttpStatus.OK).body(tokenDto);
   }
 }
