@@ -22,14 +22,10 @@ import org.springframework.web.filter.OncePerRequestFilter;
 @Component
 public class SecurityFilter extends OncePerRequestFilter {
 
-  private final TokenService tokenService;
-  private final PersonService personService;
-
   @Autowired
-  public SecurityFilter(TokenService tokenService, PersonService personService) {
-    this.tokenService = tokenService;
-    this.personService = personService;
-  }
+  private TokenService tokenService;
+  @Autowired
+  private PersonService personService;
 
   @Override
   protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response,
@@ -47,7 +43,7 @@ public class SecurityFilter extends OncePerRequestFilter {
 
       SecurityContextHolder.getContext().setAuthentication(authentication);
     }
-    
+
     filterChain.doFilter(request, response);
   }
 
