@@ -58,5 +58,4 @@ public class TokenService {
         .verify(token)
         .getSubject();
   }
-
 }

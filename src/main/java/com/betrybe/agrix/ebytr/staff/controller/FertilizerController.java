@@ -25,7 +25,7 @@ public class FertilizerController {
   private final FertilizerService fertilizerService;
 
   @Autowired
-  private FertilizerController(FertilizerService fertilizerService) {
+  public FertilizerController(FertilizerService fertilizerService) {
     this.fertilizerService = fertilizerService;
   }
 
@@ -48,7 +48,7 @@ public class FertilizerController {
    * @return - return
    */
   @GetMapping
-  @Secured("ADMIN")
+  @Secured("ROLE_ADMIN")
   public ResponseEntity<?> getAllFertilizers() {
     List<Fertilizer> response = fertilizerService.getAllFertilizers();
 

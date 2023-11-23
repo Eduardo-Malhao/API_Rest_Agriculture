@@ -44,7 +44,7 @@ public class CropController {
    * @return - return
    */
   @GetMapping
-  @Secured({"MANAGER", "ADMIN"})
+  @Secured({"ROLE_MANAGER", "ROLE_ADMIN"})
   public List<CropDto> getAllCrops() {
     List<Crop> allCrops = cropService.getAllCrop();
     return allCrops.stream()

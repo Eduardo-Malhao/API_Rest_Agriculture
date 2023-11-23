@@ -39,7 +39,7 @@ public class FarmController {
    * @return - return
    */
   @GetMapping
-  @Secured({"USER", "MANAGER", "ADMIN"})
+  @Secured({"ROLE_USER", "ROLE_MANAGER", "ROLE_ADMIN"})
   public List<Farm> getAllFarms() {
     return farmService.getAllFarms();
   }
