@@ -5,13 +5,10 @@
 A aplicação Back-End está organizada seguindo este padrão, proporcionando uma estrutura limpa e escalável. As pastas principais e suas responsabilidades são as seguintes:
 <li>Entity</li>
 <li>Respository</li>
-<li>
-  Controller
-  <li>DTO/Serialização</li>
-</li>
+<li>Controller</li>
+<li>DTO/Serialização</li>
 <li>Service</li>
 <li>Security</li>
-
 
 * Controller: Controladores que lidam com as requisições HTTP e a lógica de roteamento.
 * Service: Camada de serviço que contém a lógica de negócios da aplicação.
@@ -65,9 +62,8 @@ O Back-End foi submetido a Testes Unitários e Testes de Integração para garan
 Para executar a aplicação Back-End, siga os seguintes passos:
 
 Clone o repositório da aplicação.
-* Na pasta frontend faça: `npm install`
-* Na pasta backend faça: `npm install`
-* Inicialize o contêiner na pasta backend: `docker compose up --build`
+* Na pasta backend faça: `mvn install -DskipTests`
+* Inicialize o Spring: `docker compose up --build`
 * Popule o banco de dados, na pasta backend faça: `db:reset`
 * Após o contêiner ficar online, na pasta frontend faça: `npm start`
 
@@ -88,15 +84,15 @@ token usuário padrão: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miw
 token usuário administrador: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjk1OTE0MzMxfQ.VHLVD5CHJNTKrppA_-buaw2_RzooM-DSBA_uo2I8d-w`
 
 📍 Conclusão
-Este Back-End de Gerenciamento de Partidas de Futebol oferece uma estrutura organizada, funcionalidades poderosas e segurança no acesso aos dados. Certifique-se de revisar a documentação do Front-End para obter informações completas sobre o uso da aplicação como um todo.
+Este Back-End de Gerenciamento de Fazendas e suas Plantações oferece uma estrutura organizada, funcionalidades poderosas e segurança no acesso aos dados.
 
 Para quaisquer dúvidas ou problemas, sinta-se à vontade para entrar em contato com a equipe de desenvolvimento.
-Agradecemos por escolher nossa aplicação de Gerenciamento de Partidas de Futebol!
+Agradecemos por escolher nossa aplicação de Gerenciamento de Fazendas e suas Plantações!
 
 🧑‍💻 Equipe de Desenvolvimento  
 Eduardo Malhao - https://www.linkedin.com/in/eduardo-malhao/  
 
-# Readme - 🇺🇸 Soccer Match Management (Back-End) #  
+# Readme - 🇺🇸 Farms and Crops Management (Back-End) #  
 
 <!-- Olá, Tryber!
 - quais arquivos/pastas foram desenvolvidos por você; 
