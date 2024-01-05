@@ -11,7 +11,7 @@
   </parent>
 
   <groupId>com.betrybe</groupId>
-  <artifactId>agrix</artifactId>
+  <artifactId>agriculture</artifactId>
   <version>1.0-SNAPSHOT</version>
   <name>agrix</name>
   <description>Agrix</description>
@@ -177,7 +177,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
         <configuration>
-          <mainClass>com.betrybe.agrix.AgrixApplication</mainClass>
+          <mainClass>AgrixApplication</mainClass>
           <layout>JAR</layout>
         </configuration>
       </plugin>
