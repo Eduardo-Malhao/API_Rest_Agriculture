@@ -10,10 +10,10 @@ A aplicação Back-End está organizada seguindo este padrão, proporcionando um
 <li>Service</li>
 <li>Security</li>
 
-* Controller: Controladores que lidam com as requisições HTTP e a lógica de roteamento.
-* Service: Camada de serviço que contém a lógica de negócios da aplicação.
-* Entity/Repository: Modelos de dados e migrações para a criação e modificação do esquema do banco de dados.
-* Security: Camada para configurarção e aplicação de camadas de segurança na aplicação e controle de acesso.
+Controller: Controladores que lidam com as requisições HTTP e a lógica de roteamento.  
+Service: Camada de serviço que contém a lógica de negócios da aplicação.  
+Entity/Repository: Modelos de dados e migrações para a criação e modificação do esquema do banco de dados.  
+Security: Camada para configurarção e aplicação de camadas de segurança na aplicação e controle de acesso.  
 
 📚 Bibliotecas Utilizadas
 Para o desenvolvimento deste projeto, foram utilizadas as seguintes bibliotecas:
@@ -31,29 +31,29 @@ Funcionalidades
 📑 Consulta e Inserção de Dados
 Os usuários autenticados podem realizar as seguintes consultas:
 
-* Lista informações:
-  <li>Todas as Fazendas</li>
-  <li>Todas as Plantações</li>
-  <li>Todos ss Fertilizantes</li>
-  <li>Fazendas pelo seu ID</li>
-  <li>Plantações pelo seu ID</li>
+Lista informações:  
+  <li>Todas as Fazendas</li>  
+  <li>Todas as Plantações</li>  
+  <li>Todos ss Fertilizantes</li>  
+  <li>Fazendas pelo seu ID</li>  
+  <li>Plantações pelo seu ID</li>  
   <li>Fertilizantes pelo seu ID</li>
-  
-* Inserir:
-  <li>Usuários</li>
-  <li>Fazendas</li>
-  <li>Plantações</li>
-  <li>Fertilizantes</li>
+<br>
+Inserir:
+  <li>Usuários</li>  
+  <li>Fazendas</li>  
+  <li>Plantações</li>  
+  <li>Fertilizantes</li>  
   <li>Plantações em determinada fazenda</li>
   <li>Fertilizantes em determinada plantação</li>
 
 Ações Permitidas
 Com base nas permissões do usuário, ele pode executar as seguintes ações:
 
-* Criar novas fazendas.
-* Atribuir as plantações as fazendas.
-* Atribuir os fertilizantes as fazendas.
-* Recuperar as informações (Fazendas/Fertilizantes/Plantações)
+* Criar novas fazendas.  
+* Atribuir as plantações as fazendas.  
+* Atribuir os fertilizantes as fazendas.  
+* Recuperar as informações (Fazendas/Fertilizantes/Plantações)  
 
 👨‍🔬 Testes
 O Back-End foi submetido a Testes Unitários e Testes de Integração para garantir a qualidade do código e a funcionalidade da aplicação. A prática do TDD (Desenvolvimento Orientado por Testes) foi aplicada, e a cobertura de código foi mantida em níveis adequados.
@@ -61,30 +61,29 @@ O Back-End foi submetido a Testes Unitários e Testes de Integração para garan
 📱 Executando a Aplicação
 Para executar a aplicação Back-End, siga os seguintes passos:
 
-Clone o repositório da aplicação.
-* Na pasta raíz faça: `mvn install -DskipTests`
-* Inicialize o Docker: `docker build -t agriculture`
-* Inicialize o container: `docker run -p 8080 agriculture`
+Clone o repositório da aplicação.  
+* Na pasta raíz faça: `mvn install -DskipTests`  
+* Inicialize o Docker: `docker build -t agriculture`  
+* Inicialize o container: `docker run -p 8080 agriculture`  
 
-__Sua aplicação estará pronta para uso em sua IDE (Insomnia)__
-
-Logins para Registro:
+__Sua aplicação estará pronta para uso em sua IDE (Insomnia)__  
+Logins para Registro:  
 
 __Usuário Padrão__  
 email: "user@user.com"  
-senha: "secret_user"
-role: "ADMIN"
+senha: "secret_user"  
+role: "ADMIN"  
 
 __Usuário Administrador__  
 email: "admin@admin.com"  
-senha: "secret_admin"
-role: "USER"
+senha: "secret_admin"  
+role: "USER"  
 
-*Após o registro utilize a rota para login, para gerar seu Token e ter acesso as funcionalidades da API
+*Após o registro utilize a rota para login, para gerar seu Token e ter acesso as funcionalidades da API  
 
-Para a área de desenvolvimento: 
+Para a área de desenvolvimento:  
 token usuário padrão: `Bearer `  
-token usuário administrador: `Bearer `
+token usuário administrador: `Bearer `  
 
 📍 Conclusão
 Este Back-End de Gerenciamento de Fazendas e suas Plantações oferece uma estrutura organizada, funcionalidades poderosas e segurança no acesso aos dados.
@@ -96,7 +95,8 @@ Agradecemos por escolher nossa aplicação de Gerenciamento de Fazendas e suas P
 Eduardo Malhao - https://www.linkedin.com/in/eduardo-malhao/  
 
 # Readme - 🇺🇸 Farms and Crops Management (Back-End) #
-📂 Folder Structure and Organization
+
+📂 Folder Structure and Organization  
 The Back-End application is organized following this pattern, providing a clean and scalable structure. The main folders and their responsibilities are as follows:
 <li>Entity</li>
 <li>Respository</li>
@@ -105,10 +105,10 @@ The Back-End application is organized following this pattern, providing a clean 
 <li>Service</li>
 <li>Security</li>
 
-* Controller: Controllers that handle HTTP requests and routing logic.
-* Service: Service layer that contains the application's business logic.
-* Entity/Repository: Data models and migrations for creating and modifying the database schema.
-* Security: Layer for configuring and applying security layers in the application and access control.
+Controller: Controllers that handle HTTP requests and routing logic.  
+Service: Service layer that contains the application's business logic.  
+Entity/Repository: Data models and migrations for creating and modifying the database schema.  
+Security: Layer for configuring and applying security layers in the application and access control.  
 
 📚 Libraries Used
 For the development of this project, the following libraries were used:
@@ -126,15 +126,15 @@ Functionalities
 📑 Query and Data Insertion
 Authenticated users can perform the following queries:
 
-* List information:
+List information:
   <li>All Farms</li>
   <li>All Plantations</li>
   <li>All Fertilizers</li>
   <li>Farms by their ID</li>
   <li>Plantations by their ID</li>
   <li>Fertilizers by their ID</li>
-  
-* Insert:
+<br>
+Insert:
   <li>Users</li>
   <li>Farms</li>
   <li>Plantations</li>
@@ -164,22 +164,21 @@ Clone the application repository.
 __Your application will be ready to use in your IDE (Insomnia)__
 
 Registration Logins:
+__Default User__  
+email: "user@user.com"  
+password: "secret_user"  
+role: "ADMIN"  
 
-__Default User__
-email: "user@user.com"
-password: "secret_user"
-role: "ADMIN"
-
-__Administrator User__
-email: "admin@admin.com"
-password: "secret_admin"
-role: "USER"
+__Administrator User__  
+email: "admin@admin.com"  
+password: "secret_admin"  
+role: "USER"  
 
 *After registration, use the login route to generate your Token and access the API features
 
-For the development area:
-Default user token: `Bearer`
-admin user token: `Bearer`
+For the development area: 
+Default user token: `Bearer`  
+admin user token: `Bearer`  
 
 📍 Conclusion
 This Farm and Plantation Management Back-End offers an organized structure, powerful functionalities and secure data access.
