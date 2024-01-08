@@ -24,8 +24,6 @@
   </properties>
 
   <dependencies>
-
-    <!-- Adicione suas dependências aqui, mas não altere as que já estão configuradas -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
