@@ -62,11 +62,11 @@ O Back-End foi submetido a Testes Unitários e Testes de Integração para garan
 Para executar a aplicação Back-End, siga os seguintes passos:
 
 Clone o repositório da aplicação.  
-* Na pasta raíz faça: `mvn install -DskipTests`  
+<!-- * Na pasta raíz faça: `mvn install -DskipTests`  
 * Inicialize o Docker: `docker build -t agriculture`  
 * Inicialize o container: `docker run -p 8080 agriculture`  
 
-__Sua aplicação estará pronta para uso em sua IDE (Insomnia)__  
+__Sua aplicação estará pronta para uso em sua IDE (Insomnia)__  -->
 Logins para Registro:  
 
 __Usuário Padrão__  
@@ -80,10 +80,6 @@ senha: "secret_admin"
 role: "USER"  
 
 *Após o registro utilize a rota para login, para gerar seu Token e ter acesso as funcionalidades da API  
-
-Para a área de desenvolvimento:  
-token usuário padrão: `Bearer `  
-token usuário administrador: `Bearer `  
 
 📍 Conclusão
 Este Back-End de Gerenciamento de Fazendas e suas Plantações oferece uma estrutura organizada, funcionalidades poderosas e segurança no acesso aos dados.
@@ -154,14 +150,14 @@ Based on the user's permissions, the user can perform the following actions:
 The Back-End was subjected to Unit Tests and Integration Tests to guarantee the quality of the code and the functionality of the application. The practice of TDD (Test Driven Development) was applied, and code coverage was maintained at adequate levels.
 
 📱 Running the Application
-To run the Back-End application, follow these steps:
+ <!-- To run the Back-End application, follow these steps:
 
 Clone the application repository.
 * In the root folder do: `mvn install -DskipTests`
 * Initialize Docker: `docker build -t agriculture`
 * Initialize the container: `docker run -p 8080 agriculture`
 
-__Your application will be ready to use in your IDE (Insomnia)__
+__Your application will be ready to use in your IDE (Insomnia)__ -->
 
 Registration Logins:
 __Default User__  
@@ -175,10 +171,6 @@ password: "secret_admin"
 role: "USER"  
 
 *After registration, use the login route to generate your Token and access the API features
-
-For the development area: 
-Default user token: `Bearer`  
-admin user token: `Bearer`  
 
 📍 Conclusion
 This Farm and Plantation Management Back-End offers an organized structure, powerful functionalities and secure data access.
