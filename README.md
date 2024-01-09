@@ -3,12 +3,12 @@
 
 📂 Estrutura de Pastas e Organização
 A aplicação Back-End está organizada seguindo este padrão, proporcionando uma estrutura limpa e escalável. As pastas principais e suas responsabilidades são as seguintes:
-<li>Entity</li>
-<li>Respository</li>
-<li>Controller</li>
-<li>DTO/Serialização</li>
-<li>Service</li>
-<li>Security</li>
+  <li>Entity</li>  
+  <li>Respository</li>  
+  <li>Controller</li>  
+  <li>DTO/Serialização</li>  
+  <li>Service</li>  
+  <li>Security</li>  
 
 Controller: Controladores que lidam com as requisições HTTP e a lógica de roteamento.  
 Service: Camada de serviço que contém a lógica de negócios da aplicação.  
