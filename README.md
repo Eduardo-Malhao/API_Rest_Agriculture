@@ -45,10 +45,10 @@ Inserir:
   <li>Plantações</li>  
   <li>Fertilizantes</li>  
   <li>Plantações em determinada fazenda</li>
-  <li>Fertilizantes em determinada plantação</li>
-
-Ações Permitidas
-Com base nas permissões do usuário, ele pode executar as seguintes ações:
+  <li>Fertilizantes em determinada plantação</li>  
+<br>
+Ações Permitidas  
+Com base nas permissões do usuário, ele pode executar as seguintes ações:  
 
 * Criar novas fazendas.  
 * Atribuir as plantações as fazendas.  
@@ -61,8 +61,8 @@ O Back-End foi submetido a Testes Unitários e Testes de Integração para garan
 📱 Executando a Aplicação
 Para executar a aplicação Back-End, siga os seguintes passos:
 
-Clone o repositório da aplicação.  
 <!-- * Na pasta raíz faça: `mvn install -DskipTests`  
+Clone o repositório da aplicação.  
 * Inicialize o Docker: `docker build -t agriculture`  
 * Inicialize o container: `docker run -p 8080 agriculture`  
 
