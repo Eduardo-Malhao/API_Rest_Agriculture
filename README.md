@@ -90,7 +90,7 @@ Agradecemos por escolher nossa aplicação de Gerenciamento de Fazendas e suas P
 🧑‍💻 Equipe de Desenvolvimento  
 Eduardo Malhao - https://www.linkedin.com/in/eduardo-malhao/  
 
-# Readme - 🇺🇸 Farms and Crops Management (Back-End) #
+# Readme - 🇺🇸 Farms and Crops Management (Back-end) #
 
 📂 Folder Structure and Organization  
 The Back-End application is organized following this pattern, providing a clean and scalable structure. The main folders and their responsibilities are as follows:
